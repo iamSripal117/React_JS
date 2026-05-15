@@ -137,8 +137,71 @@
 // console.log(sub(20,10));
 
 
+// Arrays //
+
+/// looping methods in array:///
+
+// Map() //
+
+// let arr = [1,2,3,4,5];
+
+// let square = arr.map((num)=>{
+//     return num*num;
+// })
+
+// console.log(square);
+// [1,4,9,16,25]
 
 
+// Filter() //
+// let arr = [1,2,3,4,5];
+
+// let even = arr.filter((num)=> num%2==0);
+
+// console.log(even);
+
+
+// find() //
+
+// let arr = [1,2,3,4,5];
+
+// using for loop
+
+// let singlvalue = 0;
+
+// for (let i=0; i<arr.length; i++){
+//     if (arr[i]%2==0){
+//         singlvalue = arr[i];
+//         break;
+//     }
+// }
+// console.log(singlvalue);
+
+// let singlevalue = arr.find((num)=> num===4);
+
+// console.log(singlevalue);
+
+
+
+// Objects //
+
+let details = {
+    name: "sripal",
+    age: 22,
+    city: "Bangalore"
+}
+
+// console.log(details);
+// console.log(details.name); // dot notation
+// console.log(details.age); // dot notation
+// console.log(details.city); // dot notation
+// console.log(details["name"]); // bracket notation
+// console.log(details["age"]); // bracket notation
+
+for(let i in details){
+    // console.log(i); // it will print the keys of the object
+    console.log(details[i]); // it will print the values of the object
+}
 
 
 

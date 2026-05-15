@@ -1,0 +1,57 @@
+Array --->([])
+It is used to collect multiple elements and store them in a single variable.
+
+Two types of an array:
+1.Homogeneous Array: It will store the same data type value.
+2.Heterogenous Array:It will have different data type values.
+
+let array = [1,2,3,4,5,6]
+
+1.map(): It is used to iterate over an array, and it will return new array.
+ syntax: array_name.map((initial_value,index,array)=>{//code})
+
+2. filter(): It is used to filter the values based on the condition, and it will return a new array that contains the filtered values.
+ syntax: array_name.filter((initial_value,index,array)=> condition)
+
+3. find(): It is used to return a single value from the array based on the condition.
+ syntax:array_name.find((initial_value)=> condition) 
+
+
+
+
+Object ---({})-->curly brackets
+->It is a real time entity. We are storing the data with key and value pair.
+synatx:
+{
+    key:value,
+    key:value,
+    key:value,
+    .
+    .
+    .
+    .
+}
+
+let details ={
+    productName : "Mobile",
+    price : 25000
+}
+
+Accessing the object in two ways:
+
+     1.Dot notation
+     2.Box or Bracket notation
+
+1.Dot Notation:
+
+synatx: object_name.key //value
+
+clg(details.productName) //"mobile"
+clg(details.price) // 25000
+
+2.Box Notation:
+
+syntax: object_name["key"] //value
+clg(details["productName])
+        
+
