@@ -185,11 +185,11 @@
 
 // Objects //
 
-let details = {
-    name: "sripal",
-    age: 22,
-    city: "Bangalore"
-}
+// let details = {
+//     name: "sripal",
+//     age: 22,
+//     city: "Bangalore"
+// }
 
 // console.log(details);
 // console.log(details.name); // dot notation
@@ -198,16 +198,87 @@ let details = {
 // console.log(details["name"]); // bracket notation
 // console.log(details["age"]); // bracket notation
 
-for(let i in details){
-    // console.log(i); // it will print the keys of the object
-    console.log(details[i]); // it will print the values of the object
-}
+// for(let i in details){
+//     // console.log(i); // it will print the keys of the object
+//     console.log(details[i]); // it will print the values of the object
+// }
+
+// console.log("start");
+// Promise //
+
+// Pending Stage
+// let myPromise = new Promise((res,rej)=>{
+//     let lunch = true;
+// })
+// console.log(myPromise);
+
+// Fulfilled promise
+// let myPromise = new Promise((res,rej)=>{
+//     let lunch = true;
+//     if(lunch){
+//         res("Fulfilled")
+//     }
+//     else{
+//         rej("Rejected")
+//     }
+// })
+// console.log(myPromise);
+
+// Rejected promise
+
+// let myPromise = new Promise((res,rej)=>{
+//     let lunch = false;
+//     if(lunch){
+//         res("Fulfilled")
+//     }
+//     else{
+//         rej("Rejected")
+//     }
+// })
+
+// Async and await
+
+// let data = async()=>{
+//     let response = await myPromise;
+//     console.log(response);
+// };
+// data();
+// console.log("end");
 
 
+// Fetching the data by using the fetch method
 
+// let products = async()=>{
+//     let response = await fetch("https://fakestoreapi.com/products");
+//     let convertedresponse =  await response.json();
+//     console.log(convertedresponse);
+//     convertedresponse.map((product) => {
+//         let p = document.createElement("p");
+//         let img = document.createElement("img");
+//         img.src = product.image;
+//         document.body.append(img);
+//         p.innerHTML = product.title;
+//         document.body.append(p);
+//         console.log(p.innerHTML);
+//     });
+// };
+// products();
 
-
-
+let data = async()=>{
+    let response = await fetch("https://jsonplaceholder.typicode.com/todos");
+    let convertedresponse =  await response.json();
+    console.log(convertedresponse);
+    convertedresponse.map((todo) => {
+        let p = document.createElement("p");
+        let q = document.createElement("p");
+        p.innerHTML = todo.title;
+        document.body.append(p);
+        q.innerHTML = todo.completed;
+        document.body.append(q);
+        console.log(p.innerHTML);
+    });    
+};
+data();    
 
 
 

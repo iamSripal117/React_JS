@@ -53,5 +53,58 @@ clg(details.price) // 25000
 
 syntax: object_name["key"] //value
 clg(details["productName])
+
+
+
+
+Promise:
+
+It is used to convert the sync code to async code.
+It is a object.
+
+In promise, we have three states:
+          1.pending Stage
+          2.Fulfilled Stage
+          3.Rejected Stage
+
+1.Pending Stage
+let myPromise = new Promise((res,rej)=>{
+    let lunch = true;
+})
+
+
+2.Fulfilled promise
+let myPromise = new Promise((res,rej)=>{
+    let lunch = true;
+    if(lunch){
+        res("Fulfilled")
+    }
+    else{
+        rej("Rejected")
+    }
+})
+
+
+3.Rejected promise
+let myPromise = new Promise((res,rej)=>{
+    let lunch = false;
+    if(lunch){
+        res("Fulfilled")
+    }
+    else{
+        rej("Rejected")
+    }
+})
         
+To handle the promise we are using the (async) and (await)
+
+// Async and await
+
+let data = async()=>{
+    let response = await myPromise;
+    console.log(response);
+};
+data();
+console.log("end");
+
 
