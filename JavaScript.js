@@ -265,6 +265,7 @@
 // products();
 
 let data = async()=>{
+try{
     let response = await fetch("https://jsonplaceholder.typicode.com/todos");
     let convertedresponse =  await response.json();
     console.log(convertedresponse);
@@ -276,22 +277,11 @@ let data = async()=>{
         q.innerHTML = todo.completed;
         document.body.append(q);
         console.log(p.innerHTML);
-    });    
+    });  
+}  
+catch(error){
+    console.log(error);
+}
 };
 data();    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
